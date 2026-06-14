@@ -1,5 +1,5 @@
 ﻿# Artificial-Neural-Network-ANN-to-predict-customer-churn-
-Churn Prediction Model
+Churn Prediction Model....
 developed a churn prediction model using a neural network. The goal is to predict whether a customer will churn (exit the bank) based on various features.
 
 Data
