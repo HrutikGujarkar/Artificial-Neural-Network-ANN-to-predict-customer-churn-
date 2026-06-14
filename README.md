@@ -1,5 +1,9 @@
-Churn Prediction Model
-This notebook develops a churn prediction model using a neural network. The goal is to predict whether a customer will churn (exit the bank) based on various features.
+#Churn Prediction Model
+
+
+
+
+developed a churn prediction model using a neural network. The goal is to predict whether a customer will churn (exit the bank) based on various features.
 
 Data
 The dataset Churn_Modelling.csv contains customer information and a target variable indicating whether they have exited the bank.
@@ -19,6 +23,14 @@ Output layer with 1 unit and 'sigmoid' activation for binary classification.
 Compiled with 'adam' optimizer and 'binary_crossentropy' loss.
 Results
 The model's performance is evaluated using accuracy and a confusion matrix. The training history (accuracy and validation accuracy) is plotted to observe learning progress.
+Model Architecture (ANN)
+
+A Sequential Neural Network (Keras/TensorFlow) was designed:
+
+Input Layer: 11 input features
+Hidden Layer 1: 7 neurons, ReLU activation
+Hidden Layer 2: 6 neurons, ReLU activation
+Output Layer: 1 neuron, Sigmoid activation (binary classification)
 
 Metrics:
 Accuracy Score: Overall correct predictions.
