@@ -1,31 +1,73 @@
-﻿# Artificial-Neural-Network-ANN-to-predict-customer-churn-
-Churn Prediction Model....
-developed a churn prediction model using a neural network. The goal is to predict whether a customer will churn (exit the bank) based on various features.
+#Customer Churn Prediction using Artificial Neural Network (ANN)
 
-#Data
-The dataset Churn_Modelling.csv contains customer information and a target variable indicating whether they have exited the bank.
 
-#Data Preprocessing
-The data preprocessing steps include:
+Project Overview
 
-Encoding categorical features (Geography, Gender) using one-hot encoding.
-Splitting the data into training and testing sets.
-Scaling numerical features using StandardScaler.
-Model
-A Sequential Keras model is used for classification:
+This project focuses on building a Customer Churn Prediction model using an Artificial Neural Network (ANN). The objective is to predict whether a bank customer is likely to exit (churn) based on their demographic and account-related features.
 
-Input layer with 11 units and 'relu' activation.
-Two hidden layers with 7 and 6 units respectively, both with 'relu' activation.
-Output layer with 1 unit and 'sigmoid' activation for binary classification.
-Compiled with 'adam' optimizer and 'binary_crossentropy' loss.
-Results
-#The model's performance is evaluated using accuracy and a confusion matrix. The training history (accuracy and validation accuracy) is plotted to observe learning progress.
+Accurate churn prediction helps financial institutions take proactive retention actions, improve customer satisfaction, and reduce revenue loss.
 
-#Metrics:
-Accuracy Score: Overall correct predictions.
-Confusion Matrix: Detailed breakdown of True Positives, True Negatives, False Positives, and False Negatives.
+📁 Dataset
 
-The **accuracy score** 
-represents the proportion of total correct predictions (both True Positives and True Negatives) out of the total number of cases. It's a common metric for evaluating classification models. A higher accuracy score indicates a more effective model.
+The dataset used is Churn_Modelling.csv, which contains customer information such as:
 
-However, it's important to consider the context of the problem, especially in cases of imbalanced datasets where one class is much more frequent than the other. In such scenarios, a high accuracy might be misleading if the model is simply predicting the majority class most of the time. For churn prediction, it's often useful to look at other metrics like precision, recall, and F1-score, in addition to accuracy.
+Credit Score
+Geography
+Gender
+Age
+Balance
+Tenure
+Number of Products
+Credit Card status
+Active Membership status
+Estimated Salary
+Target variable: Exited (0 = No churn, 1 = Churn)
+🛠️ Data Preprocessing
+
+To prepare the data for training the neural network, the following steps were performed:
+
+Handling categorical variables
+One-Hot Encoding applied to Geography
+Label Encoding applied to Gender
+Feature Scaling
+Standardization using StandardScaler to normalize numerical features
+Train-Test Split
+Dataset split into training and testing sets for unbiased evaluation
+Model Architecture (ANN)
+
+A Sequential Neural Network (Keras/TensorFlow) was designed:
+
+Input Layer: 11 input features
+Hidden Layer 1: 7 neurons, ReLU activation
+Hidden Layer 2: 6 neurons, ReLU activation
+Output Layer: 1 neuron, Sigmoid activation (binary classification)
+⚙️ Model Compilation
+Optimizer: Adam
+Loss Function: Binary Crossentropy
+Metric: Accuracy
+📈 Model Evaluation
+
+The model is evaluated using:
+
+Accuracy Score
+Confusion Matrix
+Training & Validation Accuracy curves
+📊 Key Metrics Explained
+🎯 Accuracy
+
+Accuracy measures the proportion of correctly classified predictions (both churn and non-churn) out of all predictions.
+
+However, in real-world churn datasets, accuracy alone may not be sufficient due to class imbalance.
+
+ Why Accuracy is not enough?
+
+In churn prediction, most customers usually do not churn, so a model can achieve high accuracy by simply predicting “no churn” most of the time.
+
+Therefore, we also consider:
+
+Precision: How many predicted churn customers actually churn
+Recall: How many actual churn customers were correctly identified
+F1 Score: Balance between precision and recall
+Conclusion
+
+The ANN model successfully learns patterns in customer behavior to predict churn. While accuracy provides a general performance overview, metrics like recall and F1-score are more important for business impact, as correctly identifying potential churners is the main goal.
